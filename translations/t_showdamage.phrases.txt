@@ -1,0 +1,23 @@
+"Phrases"
+{
+	"SHOWDAMAGE_TITLE"	// Menu
+	{
+		"pl"		"Wybierz miejsce, w którym ma pokazywać obrażenia"
+		"en"		"Select a place where You want to show damage"
+	}
+	"SHOWDAMAGE_HUD"	// Menu
+	{
+		"pl"		"Pokazuj na HUD"
+		"en"		"Show on HUD"
+	}
+	"SHOWDAMAGE_CHAT"	// Menu
+	{
+		"pl"		"Pokazuj na czacie"
+		"en"		"Show on Chat"
+	}
+	"SHOWDAMAGE_HINT"	// Menu
+	{
+		"pl"		"Pokazuj na Hint"
+		"en"		"Show on Hint"
+	}
+}
