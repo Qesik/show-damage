@@ -103,11 +103,11 @@ public Action ev_PlayerHurt(Event eEvent, const char[] sName, bool bDontBroadcas
 				case 9 : { x = 0.4; y = 0.4; }
 			}
 
-			int iPerhp = RoundFloat(GetClientHealth(iVictim) / 100.0);
+			int iHP = GetClientHealth(iVictim);
 			if ( iPerhp < 0 ) iPerhp = 0;
 
-			if ( iPerhp > 60 ) SetHudTextParams(x, y, 1.3, 0, 255, 0, 200, 1);
-			else if ( iPerhp > 30 ) SetHudTextParams(x, y, 1.3, 255, 138, 0, 200, 1);
+			if ( iHP > 60 ) SetHudTextParams(x, y, 1.3, 0, 255, 0, 200, 1);
+			else if ( iHP > 30 ) SetHudTextParams(x, y, 1.3, 255, 138, 0, 200, 1);
 			else SetHudTextParams(x, y, 1.3, 255, 0, 0, 200, 1);
 
 			ShowHudText(iAttacker, -1, "%i", iDamage);
@@ -115,7 +115,7 @@ public Action ev_PlayerHurt(Event eEvent, const char[] sName, bool bDontBroadcas
 			if ( ++g_HUD[iAttacker] >= 9 ) g_HUD[iAttacker] = 0;
 		}
 		case 1 : PrintToChat(iAttacker, "-\x04%i HP (-%d armor) %N", iDamage, iDamageArmor, iVictim);
-		case 2 : PrintHintText(iAttacker, "-%d HP (-%d armor) %N", iDamage, iDamageArmor, iVictim);
+		case 2 : PrintHintText(iAttacker, "-%i HP (-%d armor) %N", iDamage, iDamageArmor, iVictim);
 	}
 	return Plugin_Continue;
 }
