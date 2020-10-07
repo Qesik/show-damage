@@ -104,7 +104,7 @@ public Action ev_PlayerHurt(Event eEvent, const char[] sName, bool bDontBroadcas
 			}
 
 			int iHP = GetClientHealth(iVictim);
-			if ( iPerhp < 0 ) iPerhp = 0;
+			if ( iHP < 0 ) iHP = 0;
 
 			if ( iHP > 60 ) SetHudTextParams(x, y, 1.3, 0, 255, 0, 200, 1);
 			else if ( iHP > 30 ) SetHudTextParams(x, y, 1.3, 255, 138, 0, 200, 1);
